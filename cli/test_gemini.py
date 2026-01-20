@@ -8,7 +8,7 @@ print(f"Using key {api_key[:6]}...")
 client = genai.Client(api_key=api_key)
 
 response = client.models.generate_content(
-    model='gemini-2.5-flash', contents='Why is Boot.dev such a great place to learn about RAG? Use one paragraph maximum.'
+    model='gemini-2.5-flash', contents='Tell me a joke about computers.'
 )
 print(response.text)
 print(f"Prompt Tokens: {response.usage_metadata.prompt_token_count}\nResponse Tokens: {response.usage_metadata.candidates_token_count}\n")
